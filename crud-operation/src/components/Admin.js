@@ -14,7 +14,7 @@ export default function Admin() {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:3005/main-api/all/user");
+      const res = await axios.get("https://crudproject-backend.onrender.com/main-api/all/user");
       if (res) {
         console.log(JSON.stringify(res.data.data));
 
@@ -30,7 +30,7 @@ export default function Admin() {
 
   const DeleteUser = async (id) => {
     try {
-      const result = await axios.delete(`http://localhost:3005/fourth/`+id);
+      const result = await axios.delete(`https://crudproject-backend.onrender.com/fourth/`+id);
       if (result.status === 200) {
         console.log(result);
         // alert("Delete successfully");
