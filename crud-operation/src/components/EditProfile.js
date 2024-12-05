@@ -20,7 +20,7 @@ export default function EditProfile() {
   const FetchData = async () => {
     try {
       const result = await axios.get(
-        `http://localhost:3005/second-api/get/${id}`
+        `https://crudproject-backend.onrender.com/second-api/get/${id}`
       );
       if (result) {
         console.log(result);
@@ -42,7 +42,7 @@ export default function EditProfile() {
     e.preventDefault();
     try {
       const UpdateResult = await axios.put(
-        `http://localhost:3005/main-api/crud/${id}`,
+        `https://crudproject-backend.onrender.com/main-api/crud/${id}`,
         {
           name: name,
           age: age,
