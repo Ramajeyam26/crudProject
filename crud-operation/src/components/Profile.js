@@ -29,7 +29,7 @@ export default function Profile() {
   const FetchData = async () => {
     try {
       const result = await axios.get(
-        `http://localhost:3005/main-api/crud/${id}`
+        `https://crudproject-backend.onrender.com/main-api/crud/${id}`
       );
       if (result.data.message === "successfull") {
         setName(result.data.data.name);
@@ -53,7 +53,7 @@ export default function Profile() {
   const DeleteUser = async () => {
     try {
       const DeleteResult = await axios.delete(
-        `http://localhost:3005/main-api/crud/${id}`
+        `https://crudproject-backend.onrender.com/main-api/crud/${id}`
       );
       if (DeleteResult) {
         console.log(DeleteResult);
