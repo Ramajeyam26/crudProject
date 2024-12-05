@@ -18,7 +18,7 @@ export default function Login() {
     // console.log(`${email} ${password}`);
     axios
       .get(
-        `http://localhost:3005/main-api/crud-get?email=${email}&&password=${password}`
+        `https://crudproject-backend.onrender.com/main-api/crud-get?email=${email}&&password=${password}`
       )
       .then((result) => {
         console.log(result.data.message);
