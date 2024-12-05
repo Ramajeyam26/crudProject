@@ -33,7 +33,7 @@ export default function Registration() {
     };
 
     await axios
-      .post(`http://localhost:3005/main-api/crud-post`, data)
+      .post(`https://crudproject-backend.onrender.com/main-api/crud-post`, data)
       .then((result) => {
         console.log(result);
       })
@@ -55,7 +55,7 @@ export default function Registration() {
     // alert(email)
     try {
       const res = await axios.get(
-        `http://localhost:3005/third-api/crud-three-get?email=${email}`
+        `https://crudproject-backend.onrender.com/third-api/crud-three-get?email=${email}`
       );
       console.log(res);
       if (res.data.message === "successfull") {
