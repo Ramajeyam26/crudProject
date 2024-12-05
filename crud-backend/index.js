@@ -7,7 +7,10 @@ require("dotenv").config();
 const app = express();
 app.use(bodyparser.json());
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin:"https://crudproject-frontend-kbdp.onrender.com",
+  methods:['GET','POST','PUT','DELETE']
+}));
 
 const port = process.env.PORT || 3006;
 const url = process.env.CONNECTION_URL;
