@@ -16,7 +16,12 @@ const port = process.env.PORT || 3006;
 const url = process.env.CONNECTION_URL;
 
 mongoose
-  .connect(url)
+  .connect(url,{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 30000,  // Increase timeout to 30 seconds
+  socketTimeoutMS: 45000  // 45 seconds
+})
   .then((result) => {
     console.log(`Successfully database connected`);
   })
