@@ -37,7 +37,7 @@ export default function Layout() {
           </NavLink>
         </div>
         <div>
-          <NavLink className="nav-link" to="/profile/1a2b3c4d5f6e">
+          <NavLink className="nav-link" to="/profile/675136d05b893756f7f42eb5">
             <FaRegUser
               className="icon-style"
               style={show ? { display: "block" } : { display: "none" }}
