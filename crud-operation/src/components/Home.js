@@ -6,7 +6,7 @@ import axios from "axios";
 export default function Home() {
   const [count, setCount] = useState(0);
   useEffect(() => {
-    axios.get(`http://localhost:3005/second-api/crud-two-get`).then((result) => {
+    axios.get(`https://crudproject-backend.onrender.com/second-api/crud-two-get`).then((result) => {
       console.log(`number of users ${result.data.data}`)
       setCount(result.data.data);
     }).catch((err) => {
